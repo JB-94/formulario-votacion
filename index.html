@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- Todos los jQuery Aquí-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Todos los Script Aquí -->
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>Formulario De Votación:</h1>
+    <form action="add_vote.php" method="post" id="voting-form">
+        <table>
+            <tr>
+                <td>Nombre y Apellido:</td>
+                <td><input type="text" placeholder="Escriba Su Nombre" name="nombre" required></td>
+            </tr>
+            <tr>
+                <td>Alias:</td>
+                <td><input type="text" placeholder="Escriba Su Alias" name="alias" required pattern="^[a-zA-Z0-9]{6,}$"
+                        title="El alias debe contener al menos 6 caracteres alfanuméricos"></td>
+            </tr>
+            <tr>
+                <td>RUT:</td>
+                <td><input type="text" placeholder="Ej:12345678-9" name="rut" required
+                        pattern="\d{1,8}-[\d|kK]{1}" title="Ingrese un RUT válido en formato chileno"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" placeholder="Ingrese Su Email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Región:</td>
+                <td>
+                    <!-- Opciones de regiones aquí -->
+                    <select class="form-select" name="id_region" id="id_region" required>
+                        <option value="" disabled selected>Seleccione Región</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Comuna:</td>
+                <td>
+                    <!-- Opciones de comunas aquí -->
+                    <select class="form-select" name="id_comuna" id="id_comuna" required>
+                        <option value="" disabled selected>Seleccione Comuna</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Candidato:</td>
+                <td>
+                    <!-- Opciones de candidatos aquí -->
+                    <select class="form-select" name="id_candidato" id="id_candidato" required>
+                        <option value="" disabled selected>Seleccione su Candidato</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Como se enteró de nosotros:</td>
+                <td>
+                    <input type="checkbox" id="web" name="como_se_entero[]" value="web" /> Web
+                    <input type="checkbox" id="tv" name="como_se_entero[]" value="tv" /> TV
+                    <input type="checkbox" id="rrss" name="como_se_entero[]" value="rrss" /> Redes Sociales
+                    <input type="checkbox" id="amigo" name="como_se_entero[]" value="amigo" /> Amigo
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button type="button" class="btn btn-primary" id="votarButton">Votar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

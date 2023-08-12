@@ -1,0 +1,50 @@
+Instrucciones de Instalación - Proyecto Formulario De Votacion
+
+Este archivo proporciona los pasos necesarios para instalar y ejecutar el proyecto "Proyecto Formulario De Votacion". Asegúrate de seguir estos pasos para configurar correctamente el proyecto en tu entorno.
+
+Requisitos Previos:
+1. Servidor web XAMPP Control Panel v3.3.0 -https://www.apachefriends.org/es/download.html-.
+2. PHP 8.17 o superior.
+3. Base de datos MySQL 5.7 o superior.
+
+Pasos de Instalación:
+
+1. Clonar el Repositorio:
+   - Clona este repositorio desde GitHub utilizando el siguiente comando:
+     git clone 'URL del Repositorio'
+
+2. Configuración del Entorno:
+   - Asegúrate de que tengas instalado PHP y MySQL en tu sistema.
+   - Configura tu servidor web para que apunte al directorio raíz del proyecto.
+
+3. Base de Datos:
+   - Importa la base de datos desde la carpeta "SQL" utilizando tu gestor. El archivo se denomina "db_formulariovotacion.db".
+
+4. Configuración de la Base de Datos:
+   - En los siguientes Archivos deberás configurar los parametros de conexión:
+	add_vote.php
+	check_duplicate_rut.php
+	get_candidates.php
+	get_comunne.php
+	get_regions.pgp
+   - Actualiza los valores de 'DB_HOST', 'DB_NAME', 'DB_USER' y 'DB_PASS' con los detalles de tu base de datos.
+	Ej: $connection = mysqli_connect("localhost", "root", "root", "db_formulariovotacion");
+
+
+5. Ejecutar el Proyecto:
+   - Accede a la URL del proyecto en tu navegador web.
+   - Deberías ver la página de inicio del proyecto.
+
+6. ¡Listo!
+   - Has instalado con éxito el proyecto Proyecto Formulario De Votacion.
+
+
+Versiones Utilizadas:
+- PHP: 8.1.17
+- Base de Datos:MySQL 5.7.47
+
+
+
+Julio Bahamondes
+Ingenierio En Informática
+juliouach@gmail.com
